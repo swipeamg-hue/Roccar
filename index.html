@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Swipe - Presentación Química Soluciones Singulares en Salud</title>
-  <meta name="description" content="Soluciones químicas profesionales de Swipe personalizadas para las 5 áreas críticas de Soluciones Singulares en Salud: Quirófanos y UCI, Lavandería Clínica, Habitaciones de Pacientes y Áreas Comunes, Dietología y Sanitarios.">
+  <title>Swipe - Roccar Concesionarias y Agencias de Autos</title>
+  <meta name="description" content="Soluciones químicas profesionales de Swipe personalizadas para las 5 áreas críticas de la concesionaria Roccar: Taller de Servicio, Piso de Ventas, Área de Lavado, Sanitarios y Oficinas.">
   
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/main.css">
@@ -30,7 +30,7 @@
 
       <!-- Badge de Identidad del Club -->
       <div class="club-lomas-badge">
-        <img src="images/Soluciones Singulares en Salud Logo.png" alt="Soluciones Singulares en Salud" style="height: 32px; width: auto; object-fit: contain;">
+        <img src="images/Roccar logo.png" alt="Roccar" style="height: 48px; width: auto; object-fit: contain;">
       </div>
     </header>
 
@@ -56,13 +56,13 @@
         <!-- Estado Pestaña (Tab Header) -->
         <div class="tab-header" style="border-top: 3px solid var(--color-alberca)">
           <span class="tab-number">01</span>
-          <span class="tab-title">Quirófanos & UCI</span>
+          <span class="tab-title">Taller de Servicio</span>
         </div>
 
         <!-- Estado Colapsado -->
         <div class="collapsed-content">
           <span class="column-number">01</span>
-          <h2 class="column-vertical-title">Quirófanos & UCI</h2>
+          <h2 class="column-vertical-title">Taller de Servicio y Mantenimiento</h2>
           <div class="column-explore-hint">
             <span>Explorar</span>
             <svg class="explore-icon-arrow" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M19 12l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -73,8 +73,8 @@
         <div class="expanded-content" id="expanded-alberca">
           <div class="dashboard-header">
             <div>
-              <span class="info-area-badge" style="color: var(--color-alberca)">Bioseguridad Crítica</span>
-              <h2 class="info-title" style="font-family: var(--font-title);">Quirófanos & UCI</h2>
+              <span class="info-area-badge" style="color: var(--color-alberca)">Taller y Mantenimiento</span>
+              <h2 class="info-title" style="font-family: var(--font-title);">Taller de Servicio y Mantenimiento</h2>
             </div>
             <button class="close-section-btn" id="close-alberca">
               <svg class="close-icon-arrow" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
@@ -86,44 +86,20 @@
             <!-- Columna Izquierda: Selector de Productos (info-panel) -->
             <div class="info-panel">
               <div class="info-title-group">
-                <span class="info-area-badge" style="color: var(--color-alberca)">Línea Quirúrgica</span>
-                <h3 class="info-title" style="font-size: 2.3rem; color: #fff; font-family: var(--font-title); font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.5rem;">Quirófanos & UCI</h3>
+                <span class="info-area-badge" style="color: var(--color-alberca)">Mantenimiento Mecánico</span>
+                <h3 class="info-title" style="font-size: 2.3rem; color: #fff; font-family: var(--font-title); font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.5rem;">Taller de Servicio</h3>
                 <p class="info-slogan" style="border-left: 2px solid var(--color-alberca); padding-left: 1rem; font-size: 0.95rem; line-height: 1.5; color: var(--color-glass-text); text-align: justify; margin-top: 0.5rem; margin-bottom: 1.5rem;">
-                  Desinfección de grado quirúrgico de contacto y esterilización química de superficies críticas e instrumental médico en áreas de alto riesgo.
+                  Limpieza pesada de motores, desengrase dieléctrico de precisión y remoción de óxido para la operatividad y estética de componentes mecánicos.
                 </p>
               </div>
 
               <!-- Selector de Contenedores de Producto (Quirófanos) -->
               <div class="alberca-products-selector" id="alberca-products-selector">
 
-                <!-- Producto 1: Swipol -->
-                <div class="alberca-product-tab active" data-product-id="swipol_quirurgico">
+                <!-- Producto 1: Swipe -->
+                <div class="alberca-product-tab active" data-product-id="swipe_taller">
                   <div class="product-tab-img-container">
-                    <img src="images/swipol.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Swipol">
-                  </div>
-                  <div class="product-tab-info">
-                    <span class="product-tab-badge">Desinfectante Quirúrgico</span>
-                    <h4 class="product-tab-name">Swipol</h4>
-                  </div>
-                  <div class="product-tab-indicator"></div>
-                </div>
-
-                <!-- Producto 2: Peracetic -->
-                <div class="alberca-product-tab" data-product-id="peracetic_esterilizante">
-                  <div class="product-tab-img-container">
-                    <img src="images/Peracetic.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Peracetic">
-                  </div>
-                  <div class="product-tab-info">
-                    <span class="product-tab-badge">Esterilizante Esporicida</span>
-                    <h4 class="product-tab-name">Peracetic</h4>
-                  </div>
-                  <div class="product-tab-indicator"></div>
-                </div>
-
-                <!-- Producto 3: Swipe -->
-                <div class="alberca-product-tab" data-product-id="swipe_quirofanos">
-                  <div class="product-tab-img-container">
-                    <img src="images/swipe_concentrado.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Swipe">
+                    <img src="images/swipe_concentrado.png" alt="Swipe">
                   </div>
                   <div class="product-tab-info">
                     <span class="product-tab-badge">Limpiador Multiusos</span>
@@ -132,14 +108,50 @@
                   <div class="product-tab-indicator"></div>
                 </div>
 
-                <!-- Producto 4: Swipe Hand Soap Foam -->
-                <div class="alberca-product-tab" data-product-id="hand_soap_foam_quirofanos">
+                <!-- Producto 2: Motor Foam -->
+                <div class="alberca-product-tab" data-product-id="motor_foam">
                   <div class="product-tab-img-container">
-                    <img src="images/Hand Soap Foam.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Hand Soap Foam">
+                    <img src="images/Motor Foam.png" alt="Motor Foam">
                   </div>
                   <div class="product-tab-info">
-                    <span class="product-tab-badge">Jabón Antimicrobial</span>
-                    <h4 class="product-tab-name">Hand Soap Foam</h4>
+                    <span class="product-tab-badge">Desengrasante Motores</span>
+                    <h4 class="product-tab-name">Motor Foam</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 3: Shock -->
+                <div class="alberca-product-tab" data-product-id="shock">
+                  <div class="product-tab-img-container">
+                    <img src="images/Shock.png" alt="Shock">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Solvente Dieléctrico</span>
+                    <h4 class="product-tab-name">Shock</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 4: Rust Off -->
+                <div class="alberca-product-tab" data-product-id="rust_off">
+                  <div class="product-tab-img-container">
+                    <img src="images/rust_off.png" alt="Rust Off">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Desincrustante Ácido</span>
+                    <h4 class="product-tab-name">Rust Off</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 5: Biodegreaser -->
+                <div class="alberca-product-tab" data-product-id="biodegreaser">
+                  <div class="product-tab-img-container">
+                    <img src="images/biodegreaser.png" alt="Biodegreaser">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Desengrasante Ecológico</span>
+                    <h4 class="product-tab-name">Biodegreaser</h4>
                   </div>
                   <div class="product-tab-indicator"></div>
                 </div>
@@ -234,13 +246,13 @@
         <!-- Estado Pestaña (Tab Header) -->
         <div class="tab-header" style="border-top: 3px solid var(--color-spa)">
           <span class="tab-number">02</span>
-          <span class="tab-title">Lavandería Clínica</span>
+          <span class="tab-title">Piso de Ventas</span>
         </div>
 
         <!-- Estado Colapsado -->
         <div class="collapsed-content">
           <span class="column-number">02</span>
-          <h2 class="column-vertical-title">Lavandería Clínica</h2>
+          <h2 class="column-vertical-title">Piso de Ventas y Showroom</h2>
           <div class="column-explore-hint">
             <span>Explorar</span>
             <svg class="explore-icon-arrow" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M19 12l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -251,8 +263,8 @@
         <div class="expanded-content" id="expanded-spa">
           <div class="dashboard-header">
             <div>
-              <span class="info-area-badge" style="color: var(--color-spa)">Manejo de Blancos</span>
-              <h2 class="info-title" style="font-family: var(--font-title);">Lavandería Clínica</h2>
+              <span class="info-area-badge" style="color: var(--color-spa)">Showroom</span>
+              <h2 class="info-title" style="font-family: var(--font-title);">Piso de Ventas y Showroom</h2>
             </div>
             <button class="close-section-btn" id="close-spa">
               <svg class="close-icon-arrow" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
@@ -261,63 +273,63 @@
           </div>
 
           <div class="dashboard-grid">
-            <!-- Columna Izquierda: Selector de 3 Productos (info-panel) -->
+            <!-- Columna Izquierda: Selector de Productos (info-panel) -->
             <div class="info-panel">
               <div class="info-title-group">
-                <span class="info-area-badge" style="color: var(--color-spa)">Línea Hospitalaria</span>
-                <h3 class="info-title" style="font-size: 2.3rem; color: #fff; font-family: var(--font-title); font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.5rem;">Lavandería Clínica</h3>
+                <span class="info-area-badge" style="color: var(--color-spa)">Área de Exhibición</span>
+                <h3 class="info-title" style="font-size: 2.3rem; color: #fff; font-family: var(--font-title); font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.5rem;">Piso de Ventas</h3>
                 <p class="info-slogan" style="border-left: 2px solid var(--color-spa); padding-left: 1rem; font-size: 0.95rem; line-height: 1.5; color: var(--color-glass-text); text-align: justify; margin-top: 0.5rem; margin-bottom: 1.5rem;">
-                  Higiene y desinfección profunda para el manejo de blancos y campos quirúrgicos expuestos a fluidos corporales, asegurando la eliminación de patógenos en textiles.
+                  Brillo de exhibición en pisos, desinfección de puntos de alto contacto en vehículos y aromatización premium para la mejor experiencia del cliente.
                 </p>
               </div>
 
               <!-- Selector de Contenedores de Producto -->
               <div class="spa-products-selector" id="spa-products-selector">
                 
-                <!-- Producto 1: HLDH -->
-                <div class="spa-product-tab active" data-product-id="hldh">
+                <!-- Producto 1: Magic -->
+                <div class="spa-product-tab active" data-product-id="magic_showroom">
                   <div class="product-tab-img-container">
-                    <img src="images/HLDH.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="HLDH">
+                    <img src="images/Magic.png" alt="Magic">
                   </div>
                   <div class="product-tab-info">
-                    <span class="product-tab-badge">Detergente Desinfectante Terminal</span>
-                    <h4 class="product-tab-name">HLDH</h4>
+                    <span class="product-tab-badge">Limpiador Aromatizante</span>
+                    <h4 class="product-tab-name">Magic</h4>
                   </div>
                   <div class="product-tab-indicator"></div>
                 </div>
 
-                <!-- Producto 2: HLDH System 3 Mezcla Clorada -->
-                <div class="spa-product-tab" data-product-id="hldh_system_3">
+                <!-- Producto 2: Sure Thing -->
+                <div class="spa-product-tab" data-product-id="sure_thing_showroom">
                   <div class="product-tab-img-container">
-                    <img src="images/HLDH System 3 mezcla clorada.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="HLDH System 3">
+                    <img src="images/sure_thing.png" alt="Sure Thing">
                   </div>
                   <div class="product-tab-info">
-                    <span class="product-tab-badge">Blanqueador y Desinfectante</span>
-                    <h4 class="product-tab-name">HLDH System 3</h4>
+                    <span class="product-tab-badge">Neutralizador de Olores</span>
+                    <h4 class="product-tab-name">Sure Thing</h4>
                   </div>
                   <div class="product-tab-indicator"></div>
                 </div>
 
-                <!-- Producto 3: Emulsigraz -->
-                <div class="spa-product-tab" data-product-id="emulsigraz">
+                <!-- Producto 3: Swipol -->
+                <div class="spa-product-tab" data-product-id="swipol_showroom">
                   <div class="product-tab-img-container">
-                    <img src="images/Emulsigraz.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Emulsigraz">
+                    <img src="images/swipol.png" alt="Swipol">
                   </div>
                   <div class="product-tab-info">
-                    <span class="product-tab-badge">Refuerzo Emulsificante Booster</span>
-                    <h4 class="product-tab-name">Emulsigraz</h4>
+                    <span class="product-tab-badge">Desinfectante de Superficies</span>
+                    <h4 class="product-tab-name">Swipol</h4>
                   </div>
                   <div class="product-tab-indicator"></div>
                 </div>
 
-                <!-- Producto 4: Soft -->
-                <div class="spa-product-tab" data-product-id="soft">
+                <!-- Producto 4: Swipe -->
+                <div class="spa-product-tab" data-product-id="swipe_showroom">
                   <div class="product-tab-img-container">
-                    <img src="images/Soft.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Soft">
+                    <img src="images/swipe_concentrado.png" alt="Swipe">
                   </div>
                   <div class="product-tab-info">
-                    <span class="product-tab-badge">Suavizante Biodegradable</span>
-                    <h4 class="product-tab-name">Soft</h4>
+                    <span class="product-tab-badge">Limpiador de Cristales</span>
+                    <h4 class="product-tab-name">Swipe</h4>
                   </div>
                   <div class="product-tab-indicator"></div>
                 </div>
@@ -413,13 +425,13 @@
         <!-- Estado Pestaña (Tab Header) -->
         <div class="tab-header" style="border-top: 3px solid var(--color-gimnasio)">
           <span class="tab-number">03</span>
-          <span class="tab-title">Habitaciones de Pacientes y Áreas Comunes</span>
+          <span class="tab-title">Estética Automotriz</span>
         </div>
 
         <!-- Estado Colapsado -->
         <div class="collapsed-content">
           <span class="column-number">03</span>
-          <h2 class="column-vertical-title">Habitaciones de Pacientes y Áreas Comunes</h2>
+          <h2 class="column-vertical-title">Área de Lavado y Estética Automotriz</h2>
           <div class="column-explore-hint">
             <span>Explorar</span>
             <svg class="explore-icon-arrow" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M19 12l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -430,8 +442,8 @@
         <div class="expanded-content" id="expanded-gimnasio">
           <div class="dashboard-header">
             <div>
-              <span class="info-area-badge" style="color: var(--color-gimnasio)">Higiene y Alto Contacto</span>
-              <h2 class="info-title" style="font-family: var(--font-title);">Habitaciones de Pacientes y Áreas Comunes</h2>
+              <span class="info-area-badge" style="color: var(--color-gimnasio)">Lavado y Detallado</span>
+              <h2 class="info-title" style="font-family: var(--font-title);">Área de Lavado y Estética Automotriz</h2>
             </div>
             <button class="close-section-btn" id="close-gimnasio">
               <svg class="close-icon-arrow" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
@@ -440,75 +452,63 @@
           </div>
 
           <div class="dashboard-grid">
-            <!-- Columna Izquierda: Selector de 2 Productos (info-panel) -->
+            <!-- Columna Izquierda: Selector de Productos (info-panel) -->
             <div class="info-panel">
               <div class="info-title-group">
-                <span class="info-area-badge" style="color: var(--color-gimnasio)">Línea Sanitaria</span>
-                <h3 class="info-title" style="font-size: 2.3rem; color: #fff; font-family: var(--font-title); font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.5rem;">Habitaciones</h3>
+                <span class="info-area-badge" style="color: var(--color-gimnasio)">Estética Vehicular</span>
+                <h3 class="info-title" style="font-size: 2.3rem; color: #fff; font-family: var(--font-title); font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.5rem;">Estética Automotriz</h3>
                 <p class="info-slogan" style="border-left: 2px solid var(--color-gimnasio); padding-left: 1rem; font-size: 0.95rem; line-height: 1.5; color: var(--color-glass-text); text-align: justify; margin-top: 0.5rem; margin-bottom: 1.5rem;">
-                  Prevención activa en puntos de alto contacto y estaciones de desinfección de manos para garantizar la seguridad del personal médico, pacientes y familiares.
+                  Limpieza y protección de pintura carrocería, abrillantado fino de interiores de vinilo, piel y plásticos, y reacondicionado de aluminio y cromo.
                 </p>
               </div>
 
-              <!-- Selector de 5 Contenedores de Producto -->
+              <!-- Selector de Contenedores de Producto -->
               <div class="gym-products-selector" id="gym-products-selector">
                 
-                <!-- Producto 1: Swipol -->
-                <div class="gym-product-tab active" data-product-id="swipol_gym">
+                <!-- Producto 1: Somthin Else -->
+                <div class="gym-product-tab active" data-product-id="somthin_else">
                   <div class="product-tab-img-container">
-                    <img src="images/swipol.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Swipol">
+                    <img src="images/Somthin Else.png" alt="Somthin Else">
                   </div>
                   <div class="product-tab-info">
-                    <span class="product-tab-badge">Desinfectante Germicida</span>
-                    <h4 class="product-tab-name">Swipol</h4>
+                    <span class="product-tab-badge">Shampoo de Carrocería</span>
+                    <h4 class="product-tab-name">Somthin Else</h4>
                   </div>
                   <div class="product-tab-indicator"></div>
                 </div>
 
-                <!-- Producto 2: Swipe Magic -->
-                <div class="gym-product-tab" data-product-id="magic_gym">
+                <!-- Producto 2: Car Shine -->
+                <div class="gym-product-tab" data-product-id="car_shine">
                   <div class="product-tab-img-container">
-                    <img src="images/Magic.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Swipe Magic">
+                    <img src="images/Car Shine.png" alt="Car Shine">
                   </div>
                   <div class="product-tab-info">
-                    <span class="product-tab-badge">Limpiador de Pisos</span>
-                    <h4 class="product-tab-name">Swipe Magic</h4>
+                    <span class="product-tab-badge">Protector de Superficies</span>
+                    <h4 class="product-tab-name">Car Shine</h4>
                   </div>
                   <div class="product-tab-indicator"></div>
                 </div>
 
-                <!-- Producto 3: Swipe -->
-                <div class="gym-product-tab" data-product-id="swipe_gym">
+                <!-- Producto 3: Alubrite -->
+                <div class="gym-product-tab" data-product-id="alubrite">
                   <div class="product-tab-img-container">
-                    <img src="images/swipe_concentrado.png" alt="Swipe">
+                    <img src="images/alubrite.png" alt="Alubrite">
                   </div>
                   <div class="product-tab-info">
-                    <span class="product-tab-badge">Limpiador Multiusos</span>
-                    <h4 class="product-tab-name">Swipe</h4>
+                    <span class="product-tab-badge">Limpiador de Aluminio</span>
+                    <h4 class="product-tab-name">Alubrite</h4>
                   </div>
                   <div class="product-tab-indicator"></div>
                 </div>
 
-                <!-- Producto 4: Swipe Sure Thing -->
-                <div class="gym-product-tab" data-product-id="sure_thing_gym">
+                <!-- Producto 4: Steelbrite -->
+                <div class="gym-product-tab" data-product-id="steelbrite">
                   <div class="product-tab-img-container">
-                    <img src="images/sure_thing.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Swipe Sure Thing">
+                    <img src="images/steelbrite.png" alt="Steelbrite">
                   </div>
                   <div class="product-tab-info">
-                    <span class="product-tab-badge">Neutralizador de Olores</span>
-                    <h4 class="product-tab-name">Sure Thing</h4>
-                  </div>
-                  <div class="product-tab-indicator"></div>
-                </div>
-
-                <!-- Producto 5: Swipe Hand Soap Foam -->
-                <div class="gym-product-tab" data-product-id="hand_soap_foam_gym">
-                  <div class="product-tab-img-container">
-                    <img src="images/Hand Soap Foam.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Swipe Hand Soap Foam">
-                  </div>
-                  <div class="product-tab-info">
-                    <span class="product-tab-badge">Jabón Antimicrobial</span>
-                    <h4 class="product-tab-name">Hand Soap Foam</h4>
+                    <span class="product-tab-badge">Lustrador de Metales</span>
+                    <h4 class="product-tab-name">Steelbrite</h4>
                   </div>
                   <div class="product-tab-indicator"></div>
                 </div>
@@ -534,7 +534,7 @@
                 <div class="gym-spotlight-column">
                   <div class="gym-spotlight-card" id="gym-spotlight-card">
                     <div class="gym-spotlight-glow"></div>
-                    <img id="gym-spotlight-img" src="images/swipol.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Swipol">
+                    <img id="gym-spotlight-img" src="images/Somthin Else.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Somthin Else">
                     <!-- Contenedor para SVGs cuando el producto no tiene imagen dedicada -->
                     <div id="gym-spotlight-svg-container" style="display: none; z-index: 2;"></div>
                   </div>
@@ -542,52 +542,7 @@
 
                 <!-- Columna de Características Técnicas -->
                 <div class="gym-features-column" id="gym-features-column">
-                  <!-- Renderizado por defecto del Producto 1 (Swipol) -->
-                  
-                  <!-- Ficha 1 -->
-                  <div class="gym-feature-card">
-                    <div class="gym-feature-icon-container">
-                      <svg class="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 11l2 2 4-4"/></svg>
-                    </div>
-                    <div class="gym-feature-text">
-                      <h4>Seguridad Hospitalaria de Amplio Espectro</h4>
-                      <p>Rigurosamente probado contra patógenos críticos como E. coli, Staphylococcus spp y Pseudomona aeroginosa, asegurando la desinfección total de los cuartos de enfermos (camas, pisos, persianas, gabinetes, sábanas).</p>
-                    </div>
-                  </div>
-
-                  <!-- Ficha 2 -->
-                  <div class="gym-feature-card">
-                    <div class="gym-feature-icon-container">
-                      <svg class="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
-                    </div>
-                    <div class="gym-feature-text">
-                      <h4>Confort Absoluto para el Paciente</h4>
-                      <p>Líquido incoloro e inodoro, permitiendo cumplir con las más estrictas normas de higiene internacional sin generar molestias respiratorias en áreas de recuperación. Seguro para la piel y no irritante.</p>
-                    </div>
-                  </div>
-
-                  <!-- Ficha 3 -->
-                  <div class="gym-feature-card">
-                    <div class="gym-feature-icon-container">
-                      <svg class="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    </div>
-                    <div class="gym-feature-text">
-                      <h4>Sustentabilidad Certificada</h4>
-                      <p>Biodegradable con un 95.70% de eficiencia, cumpliendo con los estándares de sustentabilidad clínica y mitigación de huella ecológica.</p>
-                    </div>
-                  </div>
-
-                  <!-- Ficha 4 -->
-                  <div class="gym-feature-card">
-                    <div class="gym-feature-icon-container">
-                      <svg class="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                    </div>
-                    <div class="gym-feature-text">
-                      <h4>Guía de Uso Rápido</h4>
-                      <p><strong>Superficies:</strong> Dilución 1:20 (25 ml en 500 ml de agua). Rociar y actuar por 30s. Sin enjuague. <strong>Pisos:</strong> Dilución 1:120 (83.3 ml en 10L de agua). <strong>Nebulización:</strong> Dilución 1:60.</p>
-                    </div>
-                  </div>
-
+                  <!-- Se inyecta dinámicamente -->
                 </div>
               </div>
             </div>
@@ -595,7 +550,7 @@
         </div>
       </section>
 
-      <!-- COLUMNA 4: DIETOLOGÍA Y COCINAS HOSPITALARIAS -->
+      <!-- COLUMNA 4: SANITARIOS Y VESTIDORES -->
       <section class="area-column col-gastronomia" data-area="gastronomia" id="col-gastronomia" style="--col-index: 3;">
         <div class="column-overlay"></div>
         <div class="column-pattern"></div>
@@ -603,13 +558,13 @@
         <!-- Estado Pestaña (Tab Header) -->
         <div class="tab-header" style="border-top: 3px solid var(--color-gastronomia)">
           <span class="tab-number">04</span>
-          <span class="tab-title">Dietología & Cocina</span>
+          <span class="tab-title">Sanitarios</span>
         </div>
 
         <!-- Estado Colapsado -->
         <div class="collapsed-content">
           <span class="column-number">04</span>
-          <h2 class="column-vertical-title">Dietología & Cocinas</h2>
+          <h2 class="column-vertical-title">Sanitarios y Vestidores</h2>
           <div class="column-explore-hint">
             <span>Explorar</span>
             <svg class="explore-icon-arrow" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M19 12l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -620,8 +575,8 @@
         <div class="expanded-content" id="expanded-gastronomia">
           <div class="dashboard-header">
             <div>
-              <span class="info-area-badge" style="color: var(--color-gastronomia)">Inocuidad Alimentaria</span>
-              <h2 class="info-title" style="font-family: var(--font-title);">Dietología & Cocinas</h2>
+              <span class="info-area-badge" style="color: var(--color-gastronomia)">Higiene y Aseo</span>
+              <h2 class="info-title" style="font-family: var(--font-title);">Sanitarios y Vestidores</h2>
             </div>
             <button class="close-section-btn" id="close-gastronomia">
               <svg class="close-icon-arrow" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
@@ -633,72 +588,72 @@
             <!-- Columna Izquierda: Selector de Productos (info-panel) -->
             <div class="info-panel">
               <div class="info-title-group">
-                <span class="info-area-badge" style="color: var(--color-gastronomia)">Línea Alimenticia</span>
-                <h3 class="info-title" style="font-size: 2.3rem; color: #fff; font-family: var(--font-title); font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.5rem;">Dietología & Cocinas</h3>
+                <span class="info-area-badge" style="color: var(--color-gastronomia)">Aseo de Sanitarios</span>
+                <h3 class="info-title" style="font-size: 2.3rem; color: #fff; font-family: var(--font-title); font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.5rem;">Sanitarios y Vestidores</h3>
                 <p class="info-slogan" style="border-left: 2px solid var(--color-gastronomia); padding-left: 1rem; font-size: 0.95rem; line-height: 1.5; color: var(--color-glass-text); text-align: justify; margin-top: 0.5rem; margin-bottom: 1.5rem;">
-                  Inocuidad total en la preparación de alimentos y desinfección microbiológica de dietas para pacientes inmunodeprimidos, cumpliendo normas internacionales.
+                  Limpieza profunda y desincrustación de tazas y mingitorios, higiene antimicrobial para usuarios y control total de sarro y olores.
                 </p>
               </div>
 
               <!-- Selector de Contenedores de Producto -->
               <div class="gastronomia-products-selector" id="gastronomia-products-selector">
                 
-                <!-- Producto 1: Swipe (swipe_concentrado_gastronomia) -->
-                 <div class="gastronomia-product-tab active" data-product-id="swipe_concentrado_gastronomia">
+                <!-- Producto 1: Brite -->
+                 <div class="gastronomia-product-tab active" data-product-id="brite_sanitarios">
                    <div class="product-tab-img-container">
-                     <img src="images/swipe_concentrado.png" alt="Swipe">
+                     <img src="images/swipe_brite.png" alt="Brite">
                    </div>
                    <div class="product-tab-info">
-                     <span class="product-tab-badge">Grado Alimenticio NSF A1</span>
-                     <h4 class="product-tab-name">Swipe</h4>
+                     <span class="product-tab-badge">Desincrustante de Tazas</span>
+                     <h4 class="product-tab-name">Brite</h4>
                    </div>
                    <div class="product-tab-indicator"></div>
                  </div>
 
-                 <!-- Producto 2: Grease (swipe_grease) -->
-                 <div class="gastronomia-product-tab" data-product-id="swipe_grease">
+                 <!-- Producto 2: Brite Gel -->
+                 <div class="gastronomia-product-tab" data-product-id="brite_gel_sanitarios">
                    <div class="product-tab-img-container">
-                     <img src="images/grease.png" alt="Grease">
+                     <img src="images/Brite Gel.png" alt="Brite Gel">
                    </div>
                    <div class="product-tab-info">
-                     <span class="product-tab-badge">Quitacochambre Gel</span>
-                     <h4 class="product-tab-name">Grease</h4>
+                     <span class="product-tab-badge">Gel Desincrustante</span>
+                     <h4 class="product-tab-name">Brite Gel</h4>
                    </div>
                    <div class="product-tab-indicator"></div>
                  </div>
 
-                 <!-- Producto 3: Crystal (swipe_crystal) -->
-                 <div class="gastronomia-product-tab" data-product-id="swipe_crystal">
-                   <div class="product-tab-img-container">
-                     <img src="images/crystal.png" alt="Crystal">
-                   </div>
-                   <div class="product-tab-info">
-                     <span class="product-tab-badge">Detergente Lavaloza</span>
-                     <h4 class="product-tab-name">Crystal</h4>
-                   </div>
-                   <div class="product-tab-indicator"></div>
-                 </div>
-
-                 <!-- Producto 4: Peracetic (swipe_peracetic) -->
-                 <div class="gastronomia-product-tab" data-product-id="swipe_peracetic">
-                   <div class="product-tab-img-container">
-                     <img src="images/Peracetic.png" alt="Peracetic">
-                   </div>
-                   <div class="product-tab-info">
-                     <span class="product-tab-badge">Desinfectante GRAS</span>
-                     <h4 class="product-tab-name">Peracetic</h4>
-                   </div>
-                   <div class="product-tab-indicator"></div>
-                 </div>
-
-                 <!-- Producto 5: Swipol (swipol_gastronomia) -->
-                 <div class="gastronomia-product-tab" data-product-id="swipol_gastronomia">
+                 <!-- Producto 3: Swipol -->
+                 <div class="gastronomia-product-tab" data-product-id="swipol_sanitarios">
                    <div class="product-tab-img-container">
                      <img src="images/swipol.png" alt="Swipol">
                    </div>
                    <div class="product-tab-info">
                      <span class="product-tab-badge">Desinfectante Germicida</span>
                      <h4 class="product-tab-name">Swipol</h4>
+                   </div>
+                   <div class="product-tab-indicator"></div>
+                 </div>
+
+                 <!-- Producto 4: Blue Genie -->
+                 <div class="gastronomia-product-tab" data-product-id="blue_genie_sanitarios">
+                   <div class="product-tab-img-container">
+                     <img src="images/blue_genie.png" alt="Blue Genie">
+                   </div>
+                   <div class="product-tab-info">
+                     <span class="product-tab-badge">Pastilla Enzimática</span>
+                     <h4 class="product-tab-name">Blue Genie</h4>
+                   </div>
+                   <div class="product-tab-indicator"></div>
+                 </div>
+
+                 <!-- Producto 5: Hand Soap -->
+                 <div class="gastronomia-product-tab" data-product-id="hand_soap_sanitarios">
+                   <div class="product-tab-img-container">
+                     <img src="images/hand_soap.png" alt="Hand Soap">
+                   </div>
+                   <div class="product-tab-info">
+                     <span class="product-tab-badge">Jabón Germicida</span>
+                     <h4 class="product-tab-name">Hand Soap</h4>
                    </div>
                    <div class="product-tab-indicator"></div>
                  </div>
@@ -793,13 +748,13 @@
         <!-- Estado Pestaña (Tab Header) -->
         <div class="tab-header" style="border-top: 3px solid var(--color-mantenimiento)">
           <span class="tab-number">05</span>
-          <span class="tab-title">Sanitarios & Baños</span>
+          <span class="tab-title">Oficinas</span>
         </div>
 
         <!-- Estado Colapsado -->
         <div class="collapsed-content">
           <span class="column-number">05</span>
-          <h2 class="column-vertical-title">Sanitarios & Baños</h2>
+          <h2 class="column-vertical-title">Oficinas, Cajas y Sala de Espera</h2>
           <div class="column-explore-hint">
             <span>Explorar</span>
             <svg class="explore-icon-arrow" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M19 12l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -810,8 +765,8 @@
         <div class="expanded-content" id="expanded-mantenimiento">
           <div class="dashboard-header">
             <div>
-              <span class="info-area-badge" style="color: var(--color-mantenimiento)">Control Ambiental</span>
-              <h2 class="info-title" style="font-family: var(--font-title);">Sanitarios & Baños</h2>
+              <span class="info-area-badge" style="color: var(--color-mantenimiento)">Área Administrativa</span>
+              <h2 class="info-title" style="font-family: var(--font-title);">Oficinas, Cajas y Sala de Espera</h2>
             </div>
             <button class="close-section-btn" id="close-mantenimiento">
               <svg class="close-icon-arrow" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
@@ -823,72 +778,60 @@
             <!-- Columna Izquierda: Selector de Productos (info-panel) -->
             <div class="info-panel">
               <div class="info-title-group">
-                <span class="info-area-badge" style="color: var(--color-mantenimiento)">Línea Institucional</span>
-                <h3 class="info-title" style="font-size: 2.3rem; color: #fff; font-family: var(--font-title); font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.5rem;">Sanitarios & Baños</h3>
+                <span class="info-area-badge" style="color: var(--color-mantenimiento)">Limpieza de Oficinas</span>
+                <h3 class="info-title" style="font-size: 2.3rem; color: #fff; font-family: var(--font-title); font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.5rem;">Oficinas y Recepción</h3>
                 <p class="info-slogan" style="border-left: 2px solid var(--color-mantenimiento); padding-left: 1rem; font-size: 0.95rem; line-height: 1.5; color: var(--color-glass-text); text-align: justify; margin-top: 0.5rem; margin-bottom: 1.5rem;">
-                  Protocolos de desinfección agresiva para sanitarios comunes, vestidores y baños de visitas con control absoluto de olores orgánicos.
+                  Higiene y limpieza de escritorios, cajas de cobro y salas de espera, eliminación de polvo en cristales y aromatización constante del ambiente.
                 </p>
               </div>
 
               <!-- Selector de Contenedores de Producto (Mantenimiento) -->
               <div class="mantenimiento-products-selector" id="mantenimiento-products-selector">
                 
-                <!-- Producto 1: Brite (swipe_concentrate) -->
-                <div class="mantenimiento-product-tab active" data-product-id="swipe_concentrate">
+                <!-- Producto 1: Magic -->
+                <div class="mantenimiento-product-tab active" data-product-id="magic_oficinas">
                   <div class="product-tab-img-container">
-                    <img src="images/swipe_brite.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Brite">
+                    <img src="images/Magic.png" alt="Magic">
                   </div>
                   <div class="product-tab-info">
-                    <span class="product-tab-badge">Desincrustante Líquido</span>
-                    <h4 class="product-tab-name">Brite</h4>
+                    <span class="product-tab-badge">Aromatizante de Pisos</span>
+                    <h4 class="product-tab-name">Magic</h4>
                   </div>
                   <div class="product-tab-indicator"></div>
                 </div>
 
-                <!-- Producto 2: Brite Gel (brite_gel) -->
-                <div class="mantenimiento-product-tab" data-product-id="brite_gel">
+                <!-- Producto 2: Swipol -->
+                <div class="mantenimiento-product-tab" data-product-id="swipol_oficinas">
                   <div class="product-tab-img-container">
-                    <img src="images/Brite Gel.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Brite Gel">
+                    <img src="images/swipol.png" alt="Swipol">
                   </div>
                   <div class="product-tab-info">
-                    <span class="product-tab-badge">Gel Desincrustante</span>
-                    <h4 class="product-tab-name">Brite Gel</h4>
-                  </div>
-                  <div class="product-tab-indicator"></div>
-                </div>
-
-                <!-- Producto 3: Swipe Hand Soap (hand_soap) -->
-                <div class="mantenimiento-product-tab" data-product-id="hand_soap">
-                  <div class="product-tab-img-container">
-                    <img src="images/hand_soap.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Hand Soap">
-                  </div>
-                  <div class="product-tab-info">
-                    <span class="product-tab-badge">Jabón Germicida</span>
-                    <h4 class="product-tab-name">Swipe Hand Soap</h4>
-                  </div>
-                  <div class="product-tab-indicator"></div>
-                </div>
-
-                <!-- Producto 4: Blue Genie (blue_genie) -->
-                <div class="mantenimiento-product-tab" data-product-id="blue_genie">
-                  <div class="product-tab-img-container">
-                    <img src="images/blue_genie.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Blue Genie">
-                  </div>
-                  <div class="product-tab-info">
-                    <span class="product-tab-badge">Detergente Enzimático</span>
-                    <h4 class="product-tab-name">Blue Genie</h4>
-                  </div>
-                  <div class="product-tab-indicator"></div>
-                </div>
-
-                <!-- Producto 5: Swipol (swipol_mantenimiento) -->
-                <div class="mantenimiento-product-tab" data-product-id="swipol_mantenimiento">
-                  <div class="product-tab-img-container">
-                    <img src="images/swipol.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Swipol">
-                  </div>
-                  <div class="product-tab-info">
-                    <span class="product-tab-badge">Grado Quirúrgico</span>
+                    <span class="product-tab-badge">Desinfectante de Superficies</span>
                     <h4 class="product-tab-name">Swipol</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 3: Swipe -->
+                <div class="mantenimiento-product-tab" data-product-id="swipe_oficinas">
+                  <div class="product-tab-img-container">
+                    <img src="images/swipe_concentrado.png" alt="Swipe">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Limpiador Multiusos</span>
+                    <h4 class="product-tab-name">Swipe</h4>
+                  </div>
+                  <div class="product-tab-indicator"></div>
+                </div>
+
+                <!-- Producto 4: Sure Thing -->
+                <div class="mantenimiento-product-tab" data-product-id="sure_thing_oficinas">
+                  <div class="product-tab-img-container">
+                    <img src="images/sure_thing.png" alt="Sure Thing">
+                  </div>
+                  <div class="product-tab-info">
+                    <span class="product-tab-badge">Neutralizador de Olores</span>
+                    <h4 class="product-tab-name">Sure Thing</h4>
                   </div>
                   <div class="product-tab-indicator"></div>
                 </div>
@@ -914,7 +857,7 @@
                 <div class="mantenimiento-spotlight-column">
                   <div class="mantenimiento-spotlight-card" id="mantenimiento-spotlight-card">
                     <div class="mantenimiento-spotlight-glow"></div>
-                    <img id="mantenimiento-spotlight-img" src="images/swipe_brite.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Brite Desincrustante">
+                    <img id="mantenimiento-spotlight-img" src="images/Magic.png" onerror="this.onerror=null; this.src='images/swipe_concentrado.png';" alt="Magic">
                     <!-- Contenedor para SVGs cuando el producto no tiene imagen dedicada -->
                     <div id="mantenimiento-spotlight-svg-container" style="display: none; z-index: 2;"></div>
                   </div>
@@ -922,52 +865,7 @@
 
                 <!-- Columna de Características Técnicas -->
                 <div class="mantenimiento-features-column" id="mantenimiento-features-column">
-                  <!-- Renderizado por defecto del Producto 1 (Brite desincrustante) -->
-                  
-                  <!-- Ficha 1 -->
-                  <div class="mantenimiento-feature-card">
-                    <div class="mantenimiento-feature-icon-container">
-                      <svg class="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 11l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                    <div class="mantenimiento-feature-text">
-                      <h4>Higiene Clínica Inmediata</h4>
-                      <p>Inhibe eficazmente el desarrollo de bacterias provenientes del agua y materias fecales, lo que impide de forma directa la formación de olores desagradables producidos por estos microorganismos en los baños del hospital.</p>
-                    </div>
-                  </div>
-
-                  <!-- Ficha 2 -->
-                  <div class="mantenimiento-feature-card">
-                    <div class="mantenimiento-feature-icon-container">
-                      <svg class="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                    <div class="mantenimiento-feature-text">
-                      <h4>Remoción de Incrustaciones Severas</h4>
-                      <p>Diseñado para disolver y quitar las manchas y el sarro fuertemente adherido bajo el anillo de la taza del inodoro, causado por los residuos calcáreos del agua.</p>
-                    </div>
-                  </div>
-
-                  <!-- Ficha 3 -->
-                  <div class="mantenimiento-feature-card">
-                    <div class="mantenimiento-feature-icon-container">
-                      <svg class="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                    <div class="mantenimiento-feature-text">
-                      <h4>Rentabilidad y Eficiencia de Dilución</h4>
-                      <p>Para el mantenimiento continuo, su fórmula concentrada permite una alta dilución. Esta capacidad de maximizar el rendimiento del producto es el motor para alcanzar ahorros financieros sostenidos de entre el 35% y el 50% en el presupuesto de limpieza de las áreas sanitarias.</p>
-                    </div>
-                  </div>
-
-                  <!-- Ficha 4 -->
-                  <div class="mantenimiento-feature-card">
-                    <div class="mantenimiento-feature-icon-container">
-                      <svg class="feature-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="9" x2="12" y2="13" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="17" x2="12.01" y2="17" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                    <div class="mantenimiento-feature-text">
-                      <h4>Guía de Uso Rápido y Precauciones</h4>
-                      <p><strong>Mantenimiento Diario (Dilución 1:4):</strong> Mezclar 1 parte de SWIPE BRITE por 4 partes de agua en la botella aplicadora. Aplicar en la taza, frotar con el aplicador especial y enjuagar para mantener el sanitario desinfectado y desodorizado. <br><strong>Limpieza Profunda de Sarro (Concentrado):</strong> En casos de sarro severo o antiguo, quitar el agua del W.C., aplicar el producto concentrado directamente bajo el borde, tallar y dejar remojar por 15 minutos antes de enjuagar. <br><span style="color: #ff5a5a; font-weight: 600;">⚠️ Se recomienda el uso de guantes para el personal de intendencia y, por seguridad química, nunca debe mezclarse con cloro o cualquier otro producto.</span></p>
-                    </div>
-                  </div>
-
+                  <!-- Se inyecta dinámicamente -->
                 </div>
               </div>
             </div>
@@ -1012,7 +910,7 @@
           <div class="dashboard-grid">
             <div class="info-panel">
               <div class="info-title-group">
-                <p class="info-slogan">Sustentabilidad financiera y bioseguridad para Soluciones Singulares en Salud mediante inyección de alta concentración y control de infecciones.</p>
+                <p class="info-slogan">Sustentabilidad financiera y rentabilidad operativa para agencias Roccar mediante diluciones de alta concentración y control de insumos.</p>
               </div>
               <div id="calc-container-ahorro"></div>
             </div>
@@ -1066,7 +964,7 @@
           <div class="dashboard-grid">
             <div class="info-panel">
               <div class="info-title-group">
-                <p class="info-slogan">Comprueba en sitio la eficacia biológica, rendimiento y apego a normas de nuestras soluciones de desinfección hospitalaria.</p>
+                <p class="info-slogan">Comprueba en sitio la eficacia, rendimiento y apego a normas de nuestras soluciones de limpieza y estética automotriz.</p>
               </div>
               <div id="calc-container-demo"></div>
             </div>
