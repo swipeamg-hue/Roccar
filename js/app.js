@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initGymProductSwitcher();
   initGastronomiaProductSwitcher();
   initMantenimientoProductSwitcher();
+  initBackgroundAudio();
 });
 
 /**
@@ -729,4 +730,36 @@ function updateDisplay(areaKey, product) {
     spotlightCard.style.opacity = "1";
     spotlightCard.style.transform = "scale(1)";
   }, 150);
+}
+
+/**
+ * 6. REPRODUCCIÓN DE AUDIO DE FONDO
+ */
+function initBackgroundAudio() {
+  const audio = document.getElementById("bg-audio");
+  const toggleBtn = document.getElementById("audio-toggle-btn");
+  if (!audio || !toggleBtn) return;
+
+  const btnIcon = toggleBtn.querySelector(".audio-toggle-icon");
+  const btnText = toggleBtn.querySelector(".audio-toggle-text");
+
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // Evitar clics accidentales en el acordeón u otros triggers
+
+    if (audio.paused) {
+      // Intentar reproducir (el navegador puede requerir interacción previa del usuario)
+      audio.play().then(() => {
+        if (btnIcon) btnIcon.innerText = "🔇";
+        if (btnText) btnText.innerText = "Pausar Audio";
+        toggleBtn.setAttribute("aria-label", "Pausar Audio de Fondo");
+      }).catch(err => {
+        console.warn("Autoplay bloqueado por el navegador:", err);
+      });
+    } else {
+      audio.pause();
+      if (btnIcon) btnIcon.innerText = "🔊";
+      if (btnText) btnText.innerText = "Reproducir Audio";
+      toggleBtn.setAttribute("aria-label", "Reproducir Audio de Fondo");
+    }
+  });
 }
