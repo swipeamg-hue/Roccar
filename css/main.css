@@ -265,3 +265,537 @@ body.section-active .main-header {
   background: rgba(255, 255, 255, 0.28);
   box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.28);
 }
+
+/* ==========================================================================
+   ADAPTACIÓN MÓVIL RESPONSIVA (DESKTOP-FIRST)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* 1. Estructura de Columnas Apiladas (Menú Principal Móvil) */
+  .columns-container {
+    flex-direction: column !important;
+  }
+  
+  .area-column {
+    top: calc(var(--col-index) * 14.2857vh) !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 14.2857vh !important;
+    padding: 0 1.5rem !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--color-glass-border) !important;
+    position: absolute !important;
+    box-sizing: border-box !important;
+  }
+  
+  .area-column:last-child {
+    border-bottom: none !important;
+  }
+  
+  /* Reset de transiciones de hover para evitar blur accidental en touch */
+  .columns-container:not(.has-hover-active):not(.has-active-column):has(.area-column:hover) .area-column:not(:hover) {
+    opacity: 1 !important;
+    filter: none !important;
+  }
+
+  .collapsed-content {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  .column-vertical-title {
+    writing-mode: horizontal-tb !important;
+    transform: none !important;
+    font-size: clamp(1rem, 4.5vw, 1.25rem) !important;
+    letter-spacing: 1.5px !important;
+    white-space: nowrap !important;
+  }
+  
+  .column-explore-hint {
+    display: none !important;
+  }
+
+  /* 2. Pestañas Superiores (Modo Activo) */
+  .columns-container.has-hover-active .area-column,
+  .columns-container.has-active-column .area-column {
+    top: 0 !important;
+    height: 50px !important;
+    width: 14.2857% !important;
+    left: calc(var(--col-index) * 14.2857%) !important;
+    border-bottom: 1px solid var(--color-glass-border) !important;
+    border-right: 1px solid var(--color-glass-border) !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+  
+  .columns-container.has-hover-active .area-column:last-child,
+  .columns-container.has-active-column .area-column:last-child {
+    border-right: none !important;
+  }
+  
+  .columns-container.has-hover-active .area-column .tab-header,
+  .columns-container.has-active-column .area-column .tab-header {
+    padding: 0 !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .columns-container.has-hover-active .area-column .tab-header .tab-title,
+  .columns-container.has-active-column .area-column .tab-header .tab-title {
+    display: none !important;
+  }
+  
+  .columns-container.has-hover-active .area-column .tab-header .tab-number,
+  .columns-container.has-active-column .area-column .tab-header .tab-number {
+    font-size: 0.9rem !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+  }
+  
+  .tabs-trigger-overlay {
+    height: 50px !important;
+  }
+  
+  .tab-trigger {
+    width: 14.2857% !important;
+  }
+
+  /* Indicador de pestaña activa */
+  .columns-container.has-hover-active .area-column.hover-active .tab-header,
+  .columns-container.has-active-column .area-column.active .tab-header {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 50px !important;
+    border-bottom: 2px solid currentColor !important;
+    border-top: none !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  /* 3. Columna Activa Expandida */
+  .columns-container.has-hover-active .area-column.hover-active,
+  .columns-container.has-active-column .area-column.active {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    border-bottom: none !important;
+    border-right: none !important;
+    z-index: 10 !important;
+  }
+  
+  .columns-container.has-hover-active .area-column.hover-active .expanded-content,
+  .columns-container.has-active-column .area-column.active .expanded-content {
+    margin-top: 50px !important;
+    height: calc(100vh - 50px) !important;
+    padding: 1.5rem 1rem 7rem 1rem !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+  }
+
+  .main-header {
+    padding: 1rem !important;
+  }
+  
+  .brand-container {
+    padding: 0.3rem 0.8rem !important;
+  }
+  
+  .brand-container img {
+    height: 24px !important;
+  }
+  
+  .club-lomas-badge {
+    padding: 0.3rem 0.8rem !important;
+  }
+  
+  .club-lomas-badge img {
+    height: 32px !important;
+  }
+
+  /* 4. Dashboard Header y Contenido */
+  .dashboard-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    margin-bottom: 1.5rem !important;
+    padding-bottom: 1rem !important;
+  }
+  
+  .dashboard-header div {
+    width: 100% !important;
+  }
+  
+  .close-section-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .dashboard-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  .info-panel {
+    padding-right: 0 !important;
+    gap: 1.5rem !important;
+  }
+  
+  .info-title-group {
+    margin-bottom: 1rem !important;
+  }
+  
+  .info-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .info-slogan {
+    font-size: 0.95rem !important;
+    padding-left: 0.8rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* 5. Selector de Productos Horizontal */
+  .alberca-products-selector,
+  .spa-products-selector,
+  .gym-products-selector,
+  .gastronomia-products-selector,
+  .mantenimiento-products-selector {
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
+    padding: 0.5rem 0.2rem !important;
+    max-height: none !important;
+    gap: 0.8rem !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+  
+  .alberca-products-selector::-webkit-scrollbar,
+  .spa-products-selector::-webkit-scrollbar,
+  .gym-products-selector::-webkit-scrollbar,
+  .gastronomia-products-selector::-webkit-scrollbar,
+  .mantenimiento-products-selector::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  .alberca-product-tab,
+  .spa-product-tab,
+  .gym-product-tab,
+  .gastronomia-product-tab,
+  .mantenimiento-product-tab {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    padding: 0.6rem 1rem !important;
+    gap: 0.6rem !important;
+    width: auto !important;
+    transform: none !important;
+    border-left: 1px solid var(--color-glass-border) !important;
+    border-top: 3px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .alberca-product-tab.active,
+  .spa-product-tab.active,
+  .gym-product-tab.active,
+  .gastronomia-product-tab.active,
+  .mantenimiento-product-tab.active {
+    border-top-color: currentColor !important;
+    border-left-color: rgba(255, 255, 255, 0.15) !important;
+    transform: none !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) !important;
+  }
+  
+  .alberca-product-tab::after,
+  .spa-product-tab::after,
+  .gym-product-tab::after,
+  .gastronomia-product-tab::after,
+  .mantenimiento-product-tab::after {
+    display: none !important;
+  }
+
+  .alberca-product-tab .product-tab-img-container,
+  .spa-product-tab .product-tab-img-container,
+  .gym-product-tab .product-tab-img-container,
+  .gastronomia-product-tab .product-tab-img-container,
+  .mantenimiento-product-tab .product-tab-img-container {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 8px !important;
+  }
+
+  .alberca-product-tab .product-tab-info,
+  .spa-product-tab .product-tab-info,
+  .gym-product-tab .product-tab-info,
+  .gastronomia-product-tab .product-tab-info,
+  .mantenimiento-product-tab .product-tab-info {
+    gap: 0.1rem !important;
+  }
+
+  .alberca-product-tab .product-tab-badge,
+  .spa-product-tab .product-tab-badge,
+  .gym-product-tab .product-tab-badge,
+  .gastronomia-product-tab .product-tab-badge,
+  .mantenimiento-product-tab .product-tab-badge {
+    font-size: 0.6rem !important;
+  }
+
+  .alberca-product-tab .product-tab-name,
+  .spa-product-tab .product-tab-name,
+  .gym-product-tab .product-tab-name,
+  .gastronomia-product-tab .product-tab-name,
+  .mantenimiento-product-tab .product-tab-name {
+    font-size: 0.9rem !important;
+  }
+  
+  .alberca-product-tab .product-tab-indicator,
+  .spa-product-tab .product-tab-indicator,
+  .gym-product-tab .product-tab-indicator,
+  .gastronomia-product-tab .product-tab-indicator,
+  .mantenimiento-product-tab .product-tab-indicator {
+    display: none !important;
+  }
+
+  /* 6. Ficha de Detalles Dinámicos */
+  .catalog-panel {
+    padding-right: 0 !important;
+    gap: 1.2rem !important;
+  }
+  
+  .catalog-title-bar {
+    margin-bottom: 0.2rem !important;
+  }
+  
+  .catalog-title {
+    font-size: 1.2rem !important;
+  }
+
+  .alberca-dynamic-display,
+  .spa-dynamic-display,
+  .gym-dynamic-display,
+  .gastronomia-dynamic-display,
+  .mantenimiento-dynamic-display {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+  }
+
+  .alberca-spotlight-column,
+  .spa-spotlight-column,
+  .gym-spotlight-column,
+  .gastronomia-spotlight-column,
+  .mantenimiento-spotlight-column {
+    width: 100% !important;
+  }
+
+  .alberca-spotlight-card,
+  .spa-spotlight-card,
+  .gym-spotlight-card,
+  .gastronomia-spotlight-card,
+  .mantenimiento-spotlight-card {
+    min-height: 200px !important;
+    padding: 1.5rem !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .alberca-spotlight-card img,
+  .spa-spotlight-card img,
+  .gym-spotlight-card img,
+  .gastronomia-spotlight-card img,
+  .mantenimiento-spotlight-card img {
+    max-height: 160px !important;
+  }
+  
+  .alberca-spotlight-card svg,
+  .spa-spotlight-card svg,
+  .gym-spotlight-card svg,
+  .gastronomia-spotlight-card svg,
+  .mantenimiento-spotlight-card svg {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .alberca-features-column,
+  .spa-features-column,
+  .gym-features-column,
+  .gastronomia-features-column,
+  .mantenimiento-features-column {
+    max-height: none !important;
+    overflow-y: visible !important;
+    padding-right: 0 !important;
+    gap: 0.8rem !important;
+  }
+
+  .alberca-feature-card,
+  .spa-feature-card,
+  .gym-feature-card,
+  .gastronomia-feature-card,
+  .mantenimiento-feature-card {
+    padding: 1rem !important;
+    gap: 0.8rem !important;
+    grid-template-columns: 32px 1fr !important;
+    box-sizing: border-box !important;
+  }
+
+  .alberca-feature-icon-container,
+  .spa-feature-icon-container,
+  .gym-feature-icon-container,
+  .gastronomia-feature-icon-container,
+  .mantenimiento-feature-icon-container {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 6px !important;
+  }
+  
+  .feature-icon-svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .alberca-feature-text h4,
+  .spa-feature-text h4,
+  .gym-feature-text h4,
+  .gastronomia-feature-text h4,
+  .mantenimiento-feature-text h4 {
+    font-size: 0.95rem !important;
+  }
+
+  .alberca-feature-text p,
+  .spa-feature-text p,
+  .gym-feature-text p,
+  .gastronomia-feature-text p,
+  .mantenimiento-feature-text p {
+    font-size: 0.8rem !important;
+  }
+  
+  .mantenimiento-add-to-quote-btn {
+    padding: 0.75rem 1.2rem !important;
+    font-size: 0.85rem !important;
+    border-radius: 8px !important;
+  }
+
+  /* 7. Componentes de UI Responsivos */
+  
+  /* Cajón Informativo de Detalles de Producto (Drawer) */
+  .product-drawer {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    border-left: none !important;
+    border-top: 1px solid var(--color-glass-border) !important;
+    height: 100vh !important;
+    padding: 2rem 1.2rem !important;
+    box-sizing: border-box !important;
+  }
+  
+  .drawer-close {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 1rem !important;
+  }
+
+  /* Calculadoras */
+  .calculator-card {
+    padding: 1.2rem !important;
+    gap: 1rem !important;
+    box-sizing: border-box !important;
+  }
+  
+  .calc-title {
+    font-size: 1rem !important;
+  }
+  
+  .calc-input {
+    padding: 0.6rem 0.8rem !important;
+    font-size: 0.85rem !important;
+  }
+  
+  .calc-result-box {
+    padding: 1rem !important;
+  }
+  
+  .calc-result-value {
+    font-size: 1.5rem !important;
+  }
+
+  /* Sistema de Cotización (Barra e Modal) */
+  .quotes-floating-bar {
+    padding: 0.6rem 1.2rem !important;
+    gap: 1rem !important;
+    box-sizing: border-box !important;
+  }
+  
+  .quotes-bar-text {
+    font-size: 0.8rem !important;
+  }
+  
+  .btn-open-quotes {
+    padding: 0.4rem 1rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  .quotes-modal {
+    grid-template-columns: 1fr !important;
+    max-height: 90vh !important;
+    width: 95% !important;
+    border-radius: 16px !important;
+    overflow-y: auto !important;
+  }
+  
+  .quotes-list-panel {
+    border-right: none !important;
+    border-bottom: 1px solid var(--color-glass-border) !important;
+    padding: 1.5rem 1rem !important;
+    box-sizing: border-box !important;
+  }
+  
+  .quotes-form-panel {
+    padding: 1.5rem 1rem !important;
+    box-sizing: border-box !important;
+  }
+  
+  .quote-item-row {
+    padding: 0.8rem 1rem !important;
+  }
+
+  /* Botón de Audio Flotante Circular */
+  .audio-toggle-btn {
+    bottom: 1.5rem !important;
+    right: 1.5rem !important;
+    width: 48px !important;
+    height: 48px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .audio-toggle-text {
+    display: none !important;
+  }
+  
+  .audio-toggle-icon {
+    font-size: 1.2rem !important;
+    margin: 0 !important;
+  }
+}
