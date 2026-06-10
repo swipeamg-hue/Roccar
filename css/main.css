@@ -270,23 +270,68 @@ body.section-active .main-header {
    ADAPTACIÓN MÓVIL RESPONSIVA (DESKTOP-FIRST)
    ========================================================================== */
 @media (max-width: 768px) {
-  /* 1. Estructura de Columnas Apiladas (Menú Principal Móvil) */
-  .columns-container {
-    flex-direction: column !important;
+  /* 1. Reset de Body y HTML para eliminar desbordamientos */
+  html, body {
+    overflow-x: hidden !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
   
-  .area-column {
-    top: calc(var(--col-index) * 14.2857vh) !important;
-    left: 0 !important;
+  .spa-wrapper {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
     width: 100% !important;
-    height: 14.2857vh !important;
-    padding: 0 1.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Contenedores principales responsivos */
+  .columns-container,
+  .area-column,
+  .expanded-content,
+  .dashboard-grid,
+  .info-panel,
+  .catalog-panel,
+  .calculator-card,
+  .quotes-modal,
+  .product-drawer {
+    max-width: 100vw !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. Estructura de Columnas Apiladas en Flujo Vertical (Menú Principal Móvil) */
+  .columns-container {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+    position: relative !important;
+  }
+  
+  .columns-container:not(.has-active-column):not(.has-hover-active) {
+    padding-top: 80px !important;
+  }
+  
+  /* Estado Colapsado en Menú */
+  .area-column {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 80px !important;
+    padding: 1.5rem !important;
     flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
     border-right: none !important;
     border-bottom: 1px solid var(--color-glass-border) !important;
-    position: absolute !important;
     box-sizing: border-box !important;
   }
   
@@ -320,9 +365,10 @@ body.section-active .main-header {
     display: none !important;
   }
 
-  /* 2. Pestañas Superiores (Modo Activo) */
+  /* 3. Pestañas Superiores (Modo Activo) */
   .columns-container.has-hover-active .area-column,
   .columns-container.has-active-column .area-column {
+    position: fixed !important;
     top: 0 !important;
     height: 50px !important;
     width: 14.2857% !important;
@@ -334,6 +380,7 @@ body.section-active .main-header {
     align-items: center !important;
     justify-content: center !important;
     box-sizing: border-box !important;
+    z-index: 150 !important;
   }
   
   .columns-container.has-hover-active .area-column:last-child,
@@ -363,7 +410,11 @@ body.section-active .main-header {
   }
   
   .tabs-trigger-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
     height: 50px !important;
+    z-index: 170 !important;
   }
   
   .tab-trigger {
@@ -373,26 +424,28 @@ body.section-active .main-header {
   /* Indicador de pestaña activa */
   .columns-container.has-hover-active .area-column.hover-active .tab-header,
   .columns-container.has-active-column .area-column.active .tab-header {
-    position: absolute !important;
+    position: fixed !important;
     top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
+    left: calc(var(--col-index) * 14.2857%) !important;
+    width: 14.2857% !important;
     height: 50px !important;
     border-bottom: 2px solid currentColor !important;
     border-top: none !important;
     background: rgba(255, 255, 255, 0.08) !important;
+    z-index: 160 !important;
   }
 
-  /* 3. Columna Activa Expandida */
+  /* 4. Columna Activa Expandida */
   .columns-container.has-hover-active .area-column.hover-active,
   .columns-container.has-active-column .area-column.active {
+    position: fixed !important;
     top: 0 !important;
     left: 0 !important;
-    width: 100% !important;
+    width: 100vw !important;
     height: 100vh !important;
     border-bottom: none !important;
     border-right: none !important;
-    z-index: 10 !important;
+    z-index: 100 !important;
   }
   
   .columns-container.has-hover-active .area-column.hover-active .expanded-content,
@@ -406,7 +459,17 @@ body.section-active .main-header {
   }
 
   .main-header {
-    padding: 1rem !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 80px !important;
+    padding: 0.8rem 1rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    z-index: 100 !important;
+    box-sizing: border-box !important;
   }
   
   .brand-container {
@@ -425,7 +488,7 @@ body.section-active .main-header {
     height: 32px !important;
   }
 
-  /* 4. Dashboard Header y Contenido */
+  /* 5. Dashboard Header y Contenido */
   .dashboard-header {
     flex-direction: column !important;
     align-items: flex-start !important;
@@ -469,29 +532,21 @@ body.section-active .main-header {
     line-height: 1.4 !important;
   }
 
-  /* 5. Selector de Productos Horizontal */
+  /* 6. Selector de Productos Apilado Verticalmente (Una Sola Columna) */
   .alberca-products-selector,
   .spa-products-selector,
   .gym-products-selector,
   .gastronomia-products-selector,
   .mantenimiento-products-selector {
-    flex-direction: row !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    white-space: nowrap !important;
-    padding: 0.5rem 0.2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+    white-space: normal !important;
     max-height: none !important;
     gap: 0.8rem !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-  }
-  
-  .alberca-products-selector::-webkit-scrollbar,
-  .spa-products-selector::-webkit-scrollbar,
-  .gym-products-selector::-webkit-scrollbar,
-  .gastronomia-products-selector::-webkit-scrollbar,
-  .mantenimiento-products-selector::-webkit-scrollbar {
-    display: none !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
   
   .alberca-product-tab,
@@ -499,17 +554,17 @@ body.section-active .main-header {
   .gym-product-tab,
   .gastronomia-product-tab,
   .mantenimiento-product-tab {
-    display: inline-flex !important;
+    display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     flex-shrink: 0 !important;
-    padding: 0.6rem 1rem !important;
-    gap: 0.6rem !important;
-    width: auto !important;
+    padding: 1rem !important;
+    gap: 1rem !important;
+    width: 100% !important;
     transform: none !important;
-    border-left: 1px solid var(--color-glass-border) !important;
-    border-top: 3px solid rgba(255, 255, 255, 0.15) !important;
-    border-radius: 10px !important;
+    border-left: 4px solid rgba(255, 255, 255, 0.15) !important;
+    border-top: 1px solid var(--color-glass-border) !important;
+    border-radius: 14px !important;
     box-sizing: border-box !important;
   }
   
@@ -518,8 +573,8 @@ body.section-active .main-header {
   .gym-product-tab.active,
   .gastronomia-product-tab.active,
   .mantenimiento-product-tab.active {
-    border-top-color: currentColor !important;
-    border-left-color: rgba(255, 255, 255, 0.15) !important;
+    border-left-color: currentColor !important;
+    border-top-color: var(--color-glass-border) !important;
     transform: none !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) !important;
   }
@@ -537,8 +592,8 @@ body.section-active .main-header {
   .gym-product-tab .product-tab-img-container,
   .gastronomia-product-tab .product-tab-img-container,
   .mantenimiento-product-tab .product-tab-img-container {
-    width: 44px !important;
-    height: 44px !important;
+    width: 50px !important;
+    height: 50px !important;
     border-radius: 8px !important;
   }
 
@@ -547,7 +602,7 @@ body.section-active .main-header {
   .gym-product-tab .product-tab-info,
   .gastronomia-product-tab .product-tab-info,
   .mantenimiento-product-tab .product-tab-info {
-    gap: 0.1rem !important;
+    gap: 0.15rem !important;
   }
 
   .alberca-product-tab .product-tab-badge,
@@ -555,7 +610,7 @@ body.section-active .main-header {
   .gym-product-tab .product-tab-badge,
   .gastronomia-product-tab .product-tab-badge,
   .mantenimiento-product-tab .product-tab-badge {
-    font-size: 0.6rem !important;
+    font-size: 0.7rem !important;
   }
 
   .alberca-product-tab .product-tab-name,
@@ -563,7 +618,7 @@ body.section-active .main-header {
   .gym-product-tab .product-tab-name,
   .gastronomia-product-tab .product-tab-name,
   .mantenimiento-product-tab .product-tab-name {
-    font-size: 0.9rem !important;
+    font-size: 1.05rem !important;
   }
   
   .alberca-product-tab .product-tab-indicator,
@@ -574,7 +629,7 @@ body.section-active .main-header {
     display: none !important;
   }
 
-  /* 6. Ficha de Detalles Dinámicos */
+  /* 7. Ficha de Detalles Dinámicos */
   .catalog-panel {
     padding-right: 0 !important;
     gap: 1.2rem !important;
@@ -693,7 +748,7 @@ body.section-active .main-header {
     border-radius: 8px !important;
   }
 
-  /* 7. Componentes de UI Responsivos */
+  /* 8. Componentes de UI Responsivos */
   
   /* Cajón Informativo de Detalles de Producto (Drawer) */
   .product-drawer {
