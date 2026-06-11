@@ -273,7 +273,9 @@ body.section-active .main-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #010806; /* Muy oscuro, casi negro */
+  background: rgba(2, 13, 9, 0.65); /* Fondo translúcido coincidente con el tema oscuro de Roccar */
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   padding: 1.5rem 1rem;
   border-top: 1px solid var(--color-glass-border);
   color: var(--color-text-muted);
