@@ -5,7 +5,7 @@
   top: 0;
   left: calc(var(--col-index) * 14.2857%);
   width: 14.2857%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
