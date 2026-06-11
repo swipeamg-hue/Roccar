@@ -270,20 +270,24 @@ body.section-active .main-header {
    PIE DE PÁGINA (FOOTER) MINIMALISTA
    ========================================================================== */
 .main-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(2, 13, 9, 0.25); /* Mayor transparencia para el efecto glass */
+  background: rgba(2, 13, 9, 0.08); /* Súper transparente para que se vea la presentación (autos y marcas) por detrás */
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  padding: 1.5rem 1rem;
+  padding: 1.2rem 1rem;
   border-top: 1px solid var(--color-glass-border);
   color: var(--color-text-muted);
   font-size: 12px;
   width: 100%;
   box-sizing: border-box;
-  z-index: 10;
+  z-index: 100; /* Se superpone a las columnas */
   font-family: var(--font-body);
+  pointer-events: none; /* Permite interactuar con lo que hay debajo del fondo */
 }
 
 .footer-content {
@@ -295,6 +299,7 @@ body.section-active .main-header {
   width: 100%;
   flex-wrap: wrap;
   text-align: center;
+  pointer-events: auto; /* Restaura interactividad para los elementos del footer (como el logo o links) */
 }
 
 .footer-logo {
@@ -900,7 +905,10 @@ body.section-active .main-header {
 
   /* Ajustes del Footer para Móviles */
   .main-footer {
+    position: static !important; /* Volver a estático en móvil */
     padding: 2rem 1.5rem 6rem 1.5rem !important; /* Más margen abajo para no chocar con el botón flotante */
+    background: rgba(2, 13, 9, 0.45) !important; /* Un poco más de contraste en móviles */
+    pointer-events: auto !important;
   }
   
   .footer-content {
